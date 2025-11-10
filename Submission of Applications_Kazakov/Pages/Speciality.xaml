@@ -4,12 +4,11 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Submission_of_Applications_Kazakov.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="800"
-      Title="Подача заявлений">
+      mc:Ignorable="d" d:DesignWidth="800" MinWidth="800"
+      Title="Подача заявлений" Height="535">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,540" Background="White">
+        <Grid Background="White" Height="60" VerticalAlignment="Top">
             <Image Source="C:\Users\student-a502.PERMAVIAT\Desktop\Submission of Applications_Kazakov\Submission of Applications_Kazakov\aooshchepkov.jpg"
                    HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40"/>
             <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" 
@@ -23,7 +22,7 @@
             <TextBlock Text="Выберите специальность, на которой желаете учиться:" Margin="10,35,0,5"/>
             <TextBlock Text="Можете выбрать несколько специальностей:" Foreground="Red" FontStyle="Italic" Margin="27,50,-17,10"/>
 
-            <StackPanel Margin="20,70,0,0">
+            <StackPanel Margin="20,70,0,46">
                 <CheckBox Content="12.02.01 Авиационные приборы и комплексы"/>
                 <CheckBox Content="15.02.09 Аддитивные технологии"/>
                 <CheckBox Content="09.02.07 Информационные системы и программирование (Программист)"/>
@@ -39,25 +38,25 @@
                 <CheckBox Content="27.02.07 Управление качеством продукции, процессов и услуг"/>
             </StackPanel>
 
-            <TextBlock Text="Среднее профессиональное образование получал(а):" FontWeight="Bold" Margin="10,280,0,5"/>
+            <TextBlock Text="Среднее профессиональное образование получал(а):" FontWeight="Bold" Margin="10,280,0,46"/>
             <TextBlock Text="Выберите один из вариантов:" Foreground="Red" FontStyle="Italic" Margin="23,300,-13,10"/>
 
-            <StackPanel Margin="20,315,10,0">
+            <StackPanel Margin="20,315,10,46">
                 <RadioButton GroupName="EducationLevel" Content="впервые"/>
                 <RadioButton GroupName="EducationLevel" Content="не впервые"/>
             </StackPanel>
 
-            <CheckBox Margin="0,379,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="760" Checked="CheckBox_Checked">
+            <CheckBox Margin="20,379,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="760" Checked="CheckBox_Checked">
                 <TextBlock TextWrapping="Wrap" Text="С лицензией на право осуществления образовательной деятельности, свидетельством о государственной аккредитации, правилами приёма и правилами внутреннего распорядка обучающихся в данном образовательном учреждении, с Уставом Техникума ознакомлен(а)." 
                TextAlignment="Left" VerticalAlignment="Center" Width="701"/>
             </CheckBox>
 
             <CheckBox Content="С датой представления оригиналов документов ознакомлен(а)" 
-                      Margin="0,432,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="760" 
+                      Margin="20,432,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="760" 
                       VerticalContentAlignment="Top" HorizontalContentAlignment="Left" />
 
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,18,9" VerticalAlignment="Bottom" 
-                    Width="150" Height="25" Click="Continue_Click"/>
+            <Button Click="NextButton" Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,3" 
+                    Width="150" Height="25" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Page>

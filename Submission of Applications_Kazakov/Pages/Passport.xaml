@@ -4,25 +4,46 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Submission_of_Applications_Kazakov.Pages"
-      mc:Ignorable="d" d:DesignWidth="800"
+      mc:Ignorable="d" d:DesignWidth="800" MinHeight="642" MinWidth="800"
       Title="Подача заявлений" Height="642">
 
     <Grid Background="#F8F9FA">
-        <!-- Шапка -->
-        <Grid Margin="0,0,0,582" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="266*"/>
+            <ColumnDefinition Width="255*"/>
+            <ColumnDefinition Width="279*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="White" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="261*"/>
+                <ColumnDefinition Width="139*"/>
+            </Grid.ColumnDefinitions>
             <Image Source="C:\Users\student-a502.PERMAVIAT\Desktop\Submission of Applications_Kazakov\Submission of Applications_Kazakov\aooshchepkov.jpg"
-                   HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="40"/>
+                   HorizontalAlignment="Left" Height="40" Margin="10,0,0,0" VerticalAlignment="Center" Width="40"/>
             <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55,1,0,0" VerticalAlignment="Top" 
                    FontWeight="Bold" FontSize="19"/>
-            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" Margin="55,24,80,0" VerticalAlignment="Top" FontStyle="Italic"/>
+            <Label Content="Пермского авиационного техникума им. А. Д. Швецова" Margin="55,24,80,0" VerticalAlignment="Top" FontStyle="Italic" Grid.ColumnSpan="2"/>
         </Grid>
 
-        <!-- Основной контент -->
-        <Grid Margin="0,60,0,0">
-            <TextBlock Text="Паспортные данные:" FontWeight="Bold" Margin="10,10,0,10"/>
+        <Grid Margin="0,60,0,0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="261*"/>
+                <ColumnDefinition Width="257*"/>
+                <ColumnDefinition Width="282*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="10,62,9,0" VerticalAlignment="Top"/>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="7,62,8,0" VerticalAlignment="Top" Grid.Column="1"/>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="10,0,30,496" VerticalAlignment="Bottom" Grid.Column="2"/>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="10,0,9,291" VerticalAlignment="Bottom"/>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="10,0,5,291" Grid.Column="1" VerticalAlignment="Bottom"/>
+            <TextBox TextWrapping="Wrap" Text="" Height="24" Margin="10,0,30,291" Grid.Column="2" VerticalAlignment="Bottom"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="0,371,30,0" Grid.Column="2" Height="24" VerticalAlignment="Top"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="10,371,10,0" Height="24" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="0,425,30,133" Grid.Column="2"/>
+            <TextBox TextWrapping="Wrap" Text="" Margin="10,425,10,0" Grid.ColumnSpan="2" Height="24" VerticalAlignment="Top"/>
+            <TextBlock Text="Паспортные данные:" FontWeight="Bold" Margin="10,10,0,10" Grid.ColumnSpan="3"/>
 
-            <!-- Grid для всех полей -->
-            <Grid Margin="10,35,10,0">
+            <Grid Margin="10,35,10,0" Grid.ColumnSpan="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -45,7 +66,6 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <!-- 1. ФИО -->
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="240"/>
@@ -56,40 +76,33 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Label Content="Фамилия:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
+                        <Label Content="Фамилия:" Height="56"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
                         <Label Content="Имя:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="4">
                         <Label Content="Отчество:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Grid>
 
-                <!-- 2. Дата рождения -->
                 <Grid Grid.Row="1">
                     <Label Content="Дата рождения:"/>
-                    <TextBox Height="24" Margin="0,25,0,0"/>
+                    <TextBox Height="24" Margin="0,25,21,0"/>
                 </Grid>
 
-                <!-- 3. Гражданство -->
                 <Grid Grid.Row="2">
                     <Label Content="Гражданство:"/>
-                    <TextBox Height="24" Margin="0,25,0,0"/>
+                    <TextBox Height="24" Margin="0,25,21,0"/>
                 </Grid>
 
-                <!-- 4. Место рождения -->
                 <Grid Grid.Row="3">
                     <Label Content="Место рождения:"/>
-                    <TextBox Height="24" Margin="0,25,0,0"/>
+                    <TextBox Height="24" Margin="0,25,21,0"/>
                 </Grid>
 
-                <!-- 5. Серия, дата выдачи, код подразделения -->
                 <Grid Grid.Row="4">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="240"/>
@@ -100,28 +113,25 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Label Content="Серия и номер паспорта:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
+                        <Label Content="Серия и номер паспорта:" Height="54"/>
                     </StackPanel>
 
-                    <StackPanel Grid.Column="2">
-                        <Label Content="Дата выдачи:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
-                    </StackPanel>
+                    <Label Content="Дата выдачи:" Grid.Column="2" />
 
-                    <StackPanel Grid.Column="4">
-                        <Label Content="Код подразделения:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
-                    </StackPanel>
+
+                    <StackPanel Grid.Column="4"/>
+                    <Label Content="Код подразделения:" Grid.Column="4" Height="54" VerticalAlignment="Top" HorizontalAlignment="Center" Width="240"/>
                 </Grid>
 
-                <!-- 6. Кем выдан -->
                 <Grid Grid.Row="5">
-                    <Label Content="Кем выдан:"/>
-                    <TextBox Height="24" Margin="0,25,0,0"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="32*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Кем выдан:" Grid.ColumnSpan="2"/>
+                    <TextBox Height="24" Margin="0,25,22,0" Grid.ColumnSpan="2"/>
                 </Grid>
 
-                <!-- 7. Адрес по прописке + Район -->
                 <Grid Grid.Row="6">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="480"/>
@@ -130,17 +140,14 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Label Content="Адрес по прописке:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
+                        <Label Content="Адрес по прописке:" Height="56"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
                         <Label Content="Район:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Grid>
 
-                <!-- 8. Адрес проживания фактический + Район -->
                 <Grid Grid.Row="7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="480"/>
@@ -149,17 +156,14 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Label Content="Адрес проживания фактический:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
+                        <Label Content="Адрес проживания фактический:" Height="56"/>
                     </StackPanel>
 
                     <StackPanel Grid.Column="2">
                         <Label Content="Район:"/>
-                        <TextBox Height="24" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Grid>
 
-                <!-- 9. Прикрепление сканов -->
                 <Grid Grid.Row="8">
                     <TextBlock Text="Прикрепите сканы страниц паспорта с фотографией и действующей пропиской" 
                                FontWeight="Bold" Margin="0,0,0,5"/>
@@ -167,7 +171,6 @@
                                Foreground="Red" FontStyle="Italic" Margin="0,20,0,10"/>
                 </Grid>
 
-                <!-- 10. Поле выбора файла -->
                 <Grid Grid.Row="9">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -177,11 +180,8 @@
                     <TextBox Name="PassportScanTextBox" Height="24" Margin="0,0,10,0"/>
                     <Button Content="Выбрать..." Click="BrowsePassport_Click" Grid.Column="1" Height="24"/>
                 </Grid>
-
-                <!-- 11. Кнопка "Продолжить" -->
-                <Button Content="Продолжить" Grid.Row="18" HorizontalAlignment="Left" Margin="620,16,0,0" 
-                        VerticalAlignment="Top" Width="150" Height="25" Click="Continue_Click"/>
             </Grid>
+            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,10" Width="150" Click="NextButton" Height="30" VerticalAlignment="Bottom" Grid.Column="2"/>
         </Grid>
     </Grid>
 </Page>

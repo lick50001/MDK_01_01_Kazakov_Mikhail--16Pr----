@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Submission_of_Applications_Kazakov.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" MinHeight="450" MinWidth="800"
       Title="Подача заявлений">
 
     <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,393" Background="White">
+        <Grid Background="White" Height="57" VerticalAlignment="Top">
             <Image HorizontalAlignment="Left" Height="40" Margin="10 10 0 0" VerticalAlignment="Top" Width="40" 
            Source="C:\Users\student-a502.PERMAVIAT\Desktop\Submission of Applications_Kazakov\Submission of Applications_Kazakov\aooshchepkov.jpg"/>
             <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55 1 0 0" VerticalAlignment="Top" FontWeight="Bold"
@@ -37,11 +37,10 @@
             HorizontalAlignment="Left" Margin="29,292,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="10"
             Foreground="Red"/>
 
-            <Button Content="Выбрать..." HorizontalAlignment="Right" Margin="0,317,10,0" VerticalAlignment="Top" Width="80" Height="24"/>
+            <Button Content="Выбрать..." Click="BrowsePassport_Click" HorizontalAlignment="Left" Margin="710,317,0,0" VerticalAlignment="Top" Width="80" Height="24"/>
             <TextBox HorizontalAlignment="Left" Height="24" Margin="29,317,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="668"/>
 
-            <!-- Кнопка продолжить -->
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,18" VerticalAlignment="Bottom" Width="150" Height="25"/>
+            <Button Click="NextButton" Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,15" Width="150" Height="25" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Page>

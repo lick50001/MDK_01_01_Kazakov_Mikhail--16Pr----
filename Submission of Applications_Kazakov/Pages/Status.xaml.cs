@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Submission_of_Applications_Kazakov.Pages
 {
@@ -28,6 +29,20 @@ namespace Submission_of_Applications_Kazakov.Pages
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void NextButton(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Speciality());
+        }
+
+        private void BrowsePassport_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            if (dialog.ShowDialog() == true)
+            {
+                dialog.ShowDialog();
+            }
         }
     }
 }

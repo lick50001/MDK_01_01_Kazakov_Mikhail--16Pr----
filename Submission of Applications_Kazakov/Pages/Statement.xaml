@@ -6,34 +6,40 @@
       xmlns:local="clr-namespace:Submission_of_Applications_Kazakov.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="410" d:DesignWidth="792"
-      Title="Statement">
+      Title="Statement" MinHeight="410" MinWidth="792">
 
-    <Grid Background="#F8F9FA">
-        <Grid Margin="0,0,0,355" Background="White">
+    <Grid Background="#F8F9FA" >
+        <Grid Background="White" Height="55" VerticalAlignment="Top">
             <Image HorizontalAlignment="Left" Height="40" Margin="10 10 0 0" VerticalAlignment="Top" Width="40" 
                    Source="C:\Users\student-a502.PERMAVIAT\Desktop\Submission of Applications_Kazakov\Submission of Applications_Kazakov\aooshchepkov.jpg"/>
             <Label Content="Электронная приемная компания" HorizontalAlignment="Left" Margin="55 1 0 0" VerticalAlignment="Top" FontWeight="Bold"
                    FontSize="19"/>
             <Label Content="Перского авиационного техникума им. А. Д. Швецова" Margin="55,24,80,0"
                    VerticalAlignment="Top"/>
+
         </Grid>
         <Grid Margin="0 60 0 -0.4">
-            <Label Content="Заявление" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Заявление" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2" Height="26" Width="72"/>
             <Label Content="Прошу принять меня в КГАПОУ Перский авиационный техникум им. А.Д. Швецова" HorizontalAlignment="Left"
-                   Margin="10,41,0,0" VerticalAlignment="Top"/>
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="28,67,0,0" VerticalAlignment="Top"/>
-            <CheckBox Content="по очной форме обучения" HorizontalAlignment="Left" Margin="22,91,0,0" VerticalAlignment="Top"/>
+                   Margin="10,41,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="469"/>
+            <Label Content="Выберите один из вариантов:" Margin="309,67,0,0" Grid.Column="1" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="174"/>
+            <CheckBox Content="по очной форме обучения" HorizontalAlignment="Left" Margin="3,91,0,0" VerticalAlignment="Top" Height="15" Width="168" Grid.Column="1"/>
             <CheckBox Content="по заочной форме обучения (обучение только на платной основе)" HorizontalAlignment="Left" 
-                      Margin="22,106,0,0" VerticalAlignment="Top"/>
-            <Label Content="Выберите один из вариантов:" HorizontalAlignment="Left" Margin="28,126,0,0" VerticalAlignment="Top" Foreground="Red"/>
-            <CheckBox Content="за счет бюджета" HorizontalAlignment="Left" Margin="22,165,0,0" VerticalAlignment="Top"/>
-            <CheckBox Content="по договору (платно)" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top"/>
-            <Label Content="О себе сообщите следующее:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"/>
-            <Label Content="Окончил образовательную организацию, город" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top"/>
-            <TextBox Height="24" Margin="12,237,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            <Label Content="Тот окончил образовательной организации" HorizontalAlignment="Left" Margin="12,266,0,0" VerticalAlignment="Top"/>
-            <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            <Button Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25"/>
+                      Margin="3,106,0,0" VerticalAlignment="Top" Height="15" Width="391" Grid.Column="1"/>
+            <Label Content="Выберите один из вариантов:" Margin="309,126,0,0" Foreground="Red" Grid.Column="1" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="174"/>
+            <CheckBox Content="за счет бюджета" HorizontalAlignment="Left" Margin="3,165,0,0" VerticalAlignment="Top" Height="15" Width="111" Grid.Column="1"/>
+            <CheckBox Content="по договору (платно)" HorizontalAlignment="Left" Margin="3,150,0,0" VerticalAlignment="Top" Height="15" Width="137" Grid.Column="1"/>
+            <Label Content="О себе сообщите следующее:" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="174"/>
+            <Label Content="Окончил образовательную организацию, город" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="276"/>
+            <TextBox Height="24" Margin="12,237,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Label Content="Тот окончил образовательной организации" HorizontalAlignment="Left" Margin="12,266,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="26" Width="253"/>
+            <TextBox Height="24" Margin="12,291,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Button Click="NextButton" Content="Продолжить" HorizontalAlignment="Right" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="150" Height="25" Grid.Column="1"/>
         </Grid>
+
     </Grid>
 </Page>

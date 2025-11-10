@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace Submission_of_Applications_Kazakov.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Speciality.xaml
+    /// Логика взаимодействия для Final.xaml
     /// </summary>
-    public partial class Speciality : Page
+    public partial class Final : Page
     {
-        public Speciality()
+        public Final()
         {
             InitializeComponent();
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NextButton(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Passport());
         }
     }
 }

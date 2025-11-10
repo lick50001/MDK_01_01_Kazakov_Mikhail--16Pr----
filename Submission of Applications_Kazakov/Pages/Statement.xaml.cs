@@ -24,5 +24,10 @@ namespace Submission_of_Applications_Kazakov.Pages
         {
             InitializeComponent();
         }
+
+        private void NextButton(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Education());
+        }
     }
 }
